@@ -10,7 +10,7 @@ function run({ interaction, client, handler }) {
 }
 exports.run = run;
 exports.options = {
-    devOnly: true,
+    devOnly: false,
     userPermissions: ["Administrator", "AddReactions"],
     botPermissions: ["Administrator", "AddReactions"],
     deleted: false
