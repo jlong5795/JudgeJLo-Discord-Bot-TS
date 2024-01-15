@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.options = exports.run = exports.data = void 0;
 exports.data = {
-    name: "Remove Role",
+    name: "remove-role",
     description: "Manually remove a role to a user - Admin Access Only",
 };
 function run({ interaction, client, handler }) {
@@ -13,7 +13,7 @@ function run({ interaction, client, handler }) {
 }
 exports.run = run;
 exports.options = {
-    devOnly: false,
+    devOnly: true,
     userPermissions: ["Administrator", "AddReactions"],
     botPermissions: ["Administrator", "AddReactions"],
     deleted: false

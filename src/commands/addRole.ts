@@ -1,7 +1,7 @@
 import type { CommandData, SlashCommandProps, CommandOptions } from "commandkit";
 
 export const data: CommandData = {
-    name: "Add Role",
+    name: "add-role",
     description: "Manually add a role to a user - Admin Access Only",
 }
 
