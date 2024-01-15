@@ -13,7 +13,7 @@ new CommandKit({
     // validationsPath: `${__dirname}/validations`,
     devGuildIds: [String(process.env.DEV_SERVER)],
     devRoleIds: ["629707796723793939"],
-    bulkRegister: false
+    bulkRegister: true
 })
 
 client.login(process.env.BOT_TOKEN);
