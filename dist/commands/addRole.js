@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.options = exports.run = exports.data = void 0;
 exports.data = {
-    name: "Add Role",
+    name: "add-role",
     description: "Manually add a role to a user - Admin Access Only",
 };
 function run({ interaction, client, handler }) {

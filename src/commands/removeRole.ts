@@ -1,7 +1,7 @@
 import type { CommandData, SlashCommandProps, CommandOptions } from "commandkit";
 
 export const data: CommandData = {
-    name: "Remove Role",
+    name: "remove-role",
     description: "Manually remove a role to a user - Admin Access Only",
 }
 
@@ -13,7 +13,7 @@ export function run({ interaction, client, handler }: SlashCommandProps) {
 }
 
 export const options: CommandOptions = {
-    devOnly: false,
+    devOnly: true,
     userPermissions: ["Administrator", "AddReactions"],
     botPermissions: ["Administrator", "AddReactions"],
     deleted: false
