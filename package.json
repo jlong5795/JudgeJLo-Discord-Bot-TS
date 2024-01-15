@@ -2,6 +2,9 @@
   "name": "judgejlo_bot_ts",
   "version": "0.1.0",
   "description": "Discord bot for JudgeJLo Community - Judge's Court",
+  "engines": {
+    "node": "^20.11.0"
+  },
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
