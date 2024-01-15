@@ -10,7 +10,7 @@ export function run({ interaction, client, handler }: SlashCommandProps) {
 }
 
 export const options: CommandOptions = {
-    devOnly: true,
+    devOnly: false,
     userPermissions: ["Administrator", "AddReactions"],
     botPermissions: ["Administrator", "AddReactions"],
     deleted: false
