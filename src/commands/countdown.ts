@@ -1,4 +1,12 @@
 import type { CommandData, SlashCommandProps, CommandOptions } from "commandkit";
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(duration);
+dayjs.extend(timezone);
+dayjs.extend(utc);
 
 export const data: CommandData = {
     name: "countdown",
@@ -6,15 +14,19 @@ export const data: CommandData = {
 }
 
 const countdown = () => { 
-    const launchDate = new Date("2024-04-07");
-    const currentDate = new Date();
-    const timeDiff = launchDate.getTime() - currentDate.getTime();
-    const days = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    return days;
+    const launchDate = dayjs.tz("2024-04-07T18:00:00", "America/Chicago");
+    const currentDate = dayjs().tz("America/Chicago");
+    const timeDiff = dayjs.duration(launchDate.diff(currentDate));
+    const days = timeDiff.days();
+    const hours = timeDiff.hours();
+    const minutes = timeDiff.minutes();
+    const seconds = timeDiff.seconds();
+
+    return `The Sky Vaults server will be launching in ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds! If you're not there, what are you doing with your life?`;
 }
 
 export function run({ interaction, client, handler }: SlashCommandProps) {
-    interaction.reply(`Sky Vaults will be launching in ${countdown()} days!`);
+    interaction.reply(countdown());
 }
 
 export const options: CommandOptions = {
