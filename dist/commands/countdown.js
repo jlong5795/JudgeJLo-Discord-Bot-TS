@@ -23,7 +23,7 @@ const countdown = () => {
     const hours = timeDiff.hours();
     const minutes = timeDiff.minutes();
     const seconds = timeDiff.seconds();
-    if (minutes > 0 && seconds > 0) {
+    if (hours > 0 && minutes > 0 && seconds > 0) {
         return `The Sky Vaults server will be launching in ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds! If you're not there, what are you doing with your life?`;
     }
     return `The Sky Vaults server is LIVE! Join now at amp.esconomics.com:25567!`;
